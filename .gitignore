@@ -1,0 +1,24 @@
+# Frontend: Netlify
+node_modules/
+dist/
+.env
+.env.local
+.netlify/
+
+# Backend
+backend/node_modules/
+backend/temp/
+backend/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+frontend/android/app/build/
+convertx-release.keystore
+ConvertX-Android*.apk
+desktop/ConvertX-Windows*.zip
+desktop/ConvertX-Windows/
