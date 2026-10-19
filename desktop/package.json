@@ -1,0 +1,59 @@
+{
+  "name": "convertx-desktop",
+  "version": "1.0.0",
+  "description": "ConvertX - 71 free online tools desktop app",
+  "main": "main.js",
+  "author": "ConvertX",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win zip",
+    "build:mac": "electron-builder --mac dmg",
+    "build:linux": "electron-builder --linux AppImage"
+  },
+  "build": {
+    "appId": "com.convertx.desktop",
+    "productName": "ConvertX",
+    "files": [
+      "main.js",
+      "dist/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.png",
+      "signAndEditExecutable": false,
+      "artifactName": "ConvertX-Windows.zip"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "public.app-category.utilities",
+      "artifactName": "ConvertX-macOS.dmg"
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "Utility",
+      "artifactName": "ConvertX-Linux.AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
