@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://convertx2026.netlify.app/sitemap.xml
+Sitemap: https://lovetool2026.netlify.app/sitemap.xml
