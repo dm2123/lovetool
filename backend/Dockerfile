@@ -11,9 +11,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 COPY backend/package.json backend/package-lock.json* ./
-RUN npm install --omit=dev
+RUN npm install
 
-COPY backend/src ./src
+COPY backend/ ./
+
+RUN npm run build && npm prune --omit=dev
 
 ENV NODE_ENV=production
 ENV PORT=3000
